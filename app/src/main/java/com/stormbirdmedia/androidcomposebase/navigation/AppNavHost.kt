@@ -1,12 +1,14 @@
 package com.stormbirdmedia.androidcomposebase.navigation
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.stormbirdmedia.androidcomposebase.screen.MainScreen
-import com.stormbirdmedia.androidcomposebase.screen.SecondScreen
+import com.stormbirdmedia.androidcomposebase.screen.second.SecondScreen
 
 @Composable
 fun AppNavHost(
@@ -16,7 +18,7 @@ fun AppNavHost(
     NavHost(
         navController = navController,
         startDestination = MainScreen.route,
-        modifier = modifier
+        modifier = modifier.padding(16.dp)
     ) {
         composable(route = MainScreen.route) {
             MainScreen(

@@ -1,6 +1,6 @@
 package com.stormbirdmedia.androidcomposebase.di
 
-import com.stormbirdmedia.androidcomposebase.screen.MainViewModel
+import com.stormbirdmedia.androidcomposebase.screen.main.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

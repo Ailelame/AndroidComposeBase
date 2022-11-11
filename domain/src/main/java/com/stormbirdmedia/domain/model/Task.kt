@@ -1,5 +1,7 @@
 package com.stormbirdmedia.domain.model
 
 data class Task(
-    var text : String
+    var id : Long = 0,
+    var text: String,
+    var isComplete: Boolean = false
 )

@@ -12,7 +12,7 @@ interface BaseDao<T> {
     fun insert(entities: List<T>)
 
     @Update
-    fun update(entity: T)
+    suspend fun update(entity: T)
 
     @Update
     fun update(entities: List<T>)

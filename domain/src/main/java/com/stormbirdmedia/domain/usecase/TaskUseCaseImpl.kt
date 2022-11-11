@@ -6,7 +6,7 @@ import com.stormbirdmedia.domain.port.spi.TaskSpi
 import kotlinx.coroutines.flow.Flow
 
 class TaskUseCaseImpl(private val taskSpi: TaskSpi) : TaskUseCase {
-    override suspend fun insertTask(task: String) {
+    override suspend fun insertTask(task: Task) {
         return taskSpi.insertTask(task)
     }
 
@@ -16,5 +16,9 @@ class TaskUseCaseImpl(private val taskSpi: TaskSpi) : TaskUseCase {
 
     override suspend fun deleteTaskById(id: Long) {
         return taskSpi.deleteTaskById(id)
+    }
+
+    override suspend fun updateTask(task: Task) {
+        return taskSpi.updateTask(task)
     }
 }
