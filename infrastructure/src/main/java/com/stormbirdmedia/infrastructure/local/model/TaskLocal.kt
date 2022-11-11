@@ -17,6 +17,5 @@ data class TaskLocal(
     companion object {
         fun TaskLocal.toTask() = Task(this.id, this.text, this.isComplete)
         fun Task.toTaskLocal() = TaskLocal(this.id, this.text, this.isComplete)
-
     }
 }

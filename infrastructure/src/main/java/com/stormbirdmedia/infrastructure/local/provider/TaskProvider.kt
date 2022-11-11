@@ -15,7 +15,7 @@ class TaskProvider(private val taskDao: TaskDao) : TaskSpi {
     }
 
     override fun getTasks(): Flow<List<Task>> {
-       return taskDao.getAll().map { it.map { it.toTask() } }
+        return taskDao.getAll().map { it.map { it.toTask() } }
     }
 
     override suspend fun deleteTaskById(id: Long) {
